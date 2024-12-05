@@ -1,0 +1,40 @@
+/* ==============================================
+=button
+============================================== */
+
+.c-button {
+  --button-bg: var(--color-accent-washed);
+  --button-bg-interactive: color-mix(
+    in hsl,
+    var(--color-accent-washed) 97%,
+    black 3%
+  );
+  --button-text: var(--color-accent);
+  --button-text-interactive: var(--color-accent-dark);
+  --button-radius: 3px;
+
+  display: inline-block;
+  cursor: pointer;
+  padding: calc(12 / 16 * 1rem) calc(24 / 16 * 1rem);
+
+  font-weight: 500;
+  font-size: var(--fontsize-xs);
+  letter-spacing: 0.03em;
+  line-height: 1;
+  font-family: var(--fontstack-alt);
+  text-transform: uppercase;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  text-decoration: none;
+  border-radius: var(--button-radius);
+  border: none;
+
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-bg-interactive);
+    color: var(--button-text-interactive);
+    text-decoration: none;
+  }
+}

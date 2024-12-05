@@ -1,0 +1,66 @@
+/* ==============================================
+=mobilemenu
+============================================== */
+
+.c-mobilemenu {
+  --mobilemenu-bkg: var(--color-gray-100);
+  --mobilemenu-color: var(--color-white);
+  --mobilemenu-padding: 24px;
+
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--mobilemenu-bkg);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+}
+
+.c-mobilemenu__actions {
+  flex: 0 0 auto;
+
+  padding-block: 18px;
+  padding-inline: var(--mobilemenu-padding);
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 3px;
+}
+
+.c-mobilemenu__close {
+  /* @TODO */
+
+  padding: 3px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: var(--mobilemenu-color);
+}
+
+.c-mobilemenu__main {
+  flex: 1 1 100%;
+
+  padding: var(--mobilemenu-padding);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* ==============================================
+=mobilemenu visibility
+============================================== */
+
+.c-mobilemenu:not(.is-open) {
+  display: none;
+}
+
+.c-mobilemenu.is-open {
+  display: flex;
+}

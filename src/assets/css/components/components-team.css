@@ -1,0 +1,44 @@
+/* ==============================================
+=team
+============================================== */
+
+.c-team {
+  display: block;
+}
+
+.c-team__media {
+  display: grid;
+  place-items: center;
+  margin-block-end: 18px;
+}
+
+.c-team__media::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-accent);
+  mix-blend-mode: overlay;
+
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  z-index: 1;
+}
+
+.c-team__media img {
+  filter: grayscale(1);
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.c-team__name,
+.c-team__role {
+  font-size: calc(18 / 16 * 1rem);
+  font-weight: 450;
+  font-family: var(--fontstack-alt);
+  margin-block-end: 0;
+}
+
+.c-team__role {
+  color: var(--color-text-secondary);
+}

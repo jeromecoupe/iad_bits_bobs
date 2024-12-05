@@ -1,0 +1,56 @@
+---
+permalink: index.html
+---
+
+{% extends "layouts/base.njk" %}
+
+{% from "macros/blogcard.njk" import blogcard %}
+
+{% block content %}
+  <div class="c-section">
+    <div class="l-container">
+
+      <h1 class="c-pagetitle">AI Stories</h1>
+      <div class="c-homeposts">
+        <div class="c-homeposts__latest">
+          {% set lastPost = collections.blogposts | first %}
+
+          {{ blogcard({
+            url: lastPost.url,
+            title: lastPost.data.title,
+            date: lastPost.date,
+            img: lastPost.data.image,
+            imgAlt: lastPost.data.imageAlt,
+            sticky: true,
+            bigtitle: true
+          }) }}
+
+        </div>
+        <div class="c-homeposts__posts">
+          {% set remainingPosts = collections.blogposts | offset(1) | limit(9)  %}
+          {% for item in remainingPosts %}
+            {% if loop.first %}<ul class="l-grid  l-grid--2cols-sm  l-grid--2cols-lg  l-grid--3cols-xl">{% endif %}
+        
+              <li>
+                {{ blogcard({
+                  url: item.url,
+                  title: item.data.title,
+                  date: item.date,
+                  img: item.data.image,
+                  imgAlt: item.data.imageAlt
+                }) }}
+              </li>
+              
+            {% if loop.last %}</ul>{% endif %}
+            {% else %}
+              <p>No posts found</p>
+          {% endfor %}
+
+          <p class="u-mbs-lg"><a class="c-button" href="/blog/index.html">All blogposts</a></p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

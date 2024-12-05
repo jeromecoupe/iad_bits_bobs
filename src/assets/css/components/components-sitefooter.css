@@ -1,0 +1,29 @@
+/* ==============================================
+=sitefooter
+============================================== */
+
+.c-sitefooter {
+  --footer-gb: var(--color-gray-100);
+  --footer-text: var(--color-white);
+
+  background-color: var(--footer-gb);
+  color: var(--footer-text);
+}
+
+.c-sitefooter__main {
+  padding-block-start: clamp(42px, 1.768rem + 4.286vi, 90px);
+}
+
+.c-sitefooter__logo {
+  padding-block: clamp(24px, 1.071rem + 2.143vi, 48px);
+}
+
+.c-sitefooter__end {
+  padding-block: 12px;
+  border-block-start: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.c-sitefooter__copyright {
+  margin: 0;
+  font-size: var(--fontsize-sm);
+}

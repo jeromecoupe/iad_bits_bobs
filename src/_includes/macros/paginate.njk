@@ -1,0 +1,26 @@
+{% macro paginate(params) %}
+  {% if params.totalPages > 1 %}
+    <div class="c-pagination">
+      <nav aria-label="Pagination navigation">
+        <ul class="c-pagination__nav">
+          {% if params.prevHref %}
+            <li>
+              <a class="c-pagination__link" href="{{ params.prevHref }}">
+                <span aria-hidden="true">{% include "svg/leftarrow.svg" %}</span>
+                <span>Previous page</span>
+              </a>
+            </li>
+          {% endif %}
+          {% if params.nextHref %}
+            <li>
+                <a class="c-pagination__link" href="{{ params.nextHref }}">
+                  <span>Next page</span>
+                  <span aria-hidden="true">{% include "svg/rightarrow.svg" %}</span>
+                </a>
+            </li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+  {% endif %}
+{% endmacro %}

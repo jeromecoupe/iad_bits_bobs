@@ -1,0 +1,29 @@
+<header class="c-siteheader">
+  <div class="l-container">
+    <div class="c-siteheader__content">
+      <p class="c-siteheader__logo">
+        <a href="/">
+          <img
+            src="/assets/img/logo.svg"
+            alt=logo: Bits & Bobs: go to homepage">
+        </a>
+      </p>
+      <div class="c-siteheader__nav">
+        <nav aria-label="Main Navigation">
+          {% for item in mainnav %}
+            {% if loop.first %}<ul class="c-mainnav">{% endif %}
+              <li class="c-mainnav__item">
+                <a 
+                  href="{{ item.navUrl }}"
+                  class="c-mainnav__link">
+                    {{ item.navLabel }}
+                </a>
+              </li>
+            {% if loop.last %}</ul>{% endif %}
+          {% endfor %}
+        </nav>
+      </div>
+    </div>
+  </div>
+  {% include "partials/mobilemenu.njk" %}
+</header>

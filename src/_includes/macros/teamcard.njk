@@ -1,0 +1,14 @@
+{% macro teamcard(params) %}
+  <article class="c-team">
+    <p class="c-team__media">
+      <img 
+        src="/assets/img/team/{{ params.image }}"
+        class="o-fluidimg" 
+        alt="{{ params.name }} {{ params.surname }}"
+        decoding="async"
+        loading="lazy">
+    </p>
+    <h3 class="c-team__name">{{ params.name }} {{ params.surname }}</h3>
+    <p class="c-team__role">{{ params.role }}</p>
+  </article>
+{% endmacro %}

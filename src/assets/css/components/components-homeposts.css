@@ -1,0 +1,26 @@
+/* ==============================================
+=homeposts
+============================================== */
+
+.c-homeposts {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "a"
+    "b";
+  gap: var(--gutter);
+
+  @media (width >= 750px) {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+    grid-template-areas: "a b";
+    gap: 24px;
+  }
+}
+
+.c-homeposts__latest {
+  grid-area: a;
+}
+
+.c-homeposts__posts {
+  grid-area: b;
+}

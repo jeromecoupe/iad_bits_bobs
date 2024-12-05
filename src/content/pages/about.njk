@@ -1,0 +1,52 @@
+---
+permalink: "about/index.html"
+---
+
+{% extends "layouts/base.njk" %} 
+
+{% from "macros/blogcard.njk" import blogcard %} 
+{% from "macros/teamcard.njk" import teamcard %} 
+
+{% block content %}
+<div class="c-section">
+  <div class="l-container">
+    <h1 class="c-pagetitle">About Us</h1>
+
+    <div class="l-split  l-split--half-md">
+      <div>
+        <h2 class="c-h2">Our mission</h2>
+      </div>
+      <div>
+        <p class="c-lead">
+          Artificial Intelligence is reshaping our societies, delivering groundbreaking advancements while presenting challenges of unparalleled scale. With this blog, we aim to explore AI's diverse benefits and risks, offering insights from a wide range of perspectives.
+        </p>
+        <p>
+          Maecenas placerat lorem id libero bibendum, nec maximus velit mattis. Duis quis blandit massa. Vestibulum tellus sapien, vehicula eget laoreet sit amet, rhoncus at risus. Vestibulum risus lectus, semper vel auctor sit amet, varius at erat. Nullam sit amet posuere neque. Donec sodales pharetra leo, lacinia molestie dolor.
+        </p>
+        <p>
+          In a massa a lectus blandit aliquam quis euismod lacus. Morbi mattis turpis eu nulla suscipit euismod. Quisque eleifend lobortis maximus. Maecenas auctor, metus id facilisis hendrerit, lectus velit ultrices orci, et interdum ante tortor ut urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus id leo volutpat, auctor magna sit amet, tempor elit. Praesent sollicitudin nisi felis, quis interdum justo fringilla vel. Nulla mollis condimentum odio, vel facilisis tortor elementum nec. Quisque dignissim dignissim tempus. Phasellus pulvinar tortor vitae sapien tincidunt, ac tempor nibh aliquet.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="c-section">
+  <div class="l-container">
+
+    <h2 class="c-h2">The team</h2>
+    {% for item in collections.team %}
+      {% if loop.first %}<ul class="l-grid  l-grid--3cols-md">{% endif %}
+        <li>
+          {{ teamcard({
+            image: item.data.image,
+            name: item.data.name,
+            surname: item.data.surname,
+            role: item.data.role
+          }) }}
+        </li>
+      {% if loop.last %}</ul>{% endif %}
+    {% endfor %}
+
+  </div>
+</div>
+{% endblock %}

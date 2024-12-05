@@ -1,0 +1,25 @@
+/* ==============================================
+=typography
+============================================== */
+
+/*
+https://www.modularscale.com/?16&px&1.125
+*/
+
+:root {
+  --fontstack-main: "Helvetica Neue", system-ui, sans-serif;
+  --fontstack-alt: "General Sans", system-ui, sans-serif;
+
+  --fontsize-h1: clamp(29/16 * 1rem, 1.509rem + 1.518vi, 46/16 * 1rem);
+  --fontsize-h2: clamp(26/16 * 1rem, 1rem + 2vi, 29/16 * 1rem);
+  --fontsize-h3: clamp(23/16 * 1rem, 1rem + 2vi, 26/16 * 1rem);
+  --fontsize-h4: clamp(20/16 * 1rem, 1rem + 2vi, 23/16 * 1rem);
+  --fontsize-h5: clamp(18/16 * 1rem, 1rem + 2vi, 20/16 * 1rem);
+  --fontsize-h6: clamp(16/16 * 1rem, 0.964rem + 0.179vi, 18/16 * 1rem);
+
+  --fontsize-xl: clamp(20/16 * 1rem, 1rem + 2vi, 23/16 * 1rem);
+  --fontsize-lg: clamp(18/16 * 1rem, 1.089rem + 0.179vi, 20/16 * 1rem);
+  --fontsize-base: clamp(1rem, 0.964rem + 0.179vi, 18/16 * 1rem);
+  --fontsize-sm: calc(14 / 16 * 1rem);
+  --fontsize-xs: calc(13 / 16 * 1rem);
+}

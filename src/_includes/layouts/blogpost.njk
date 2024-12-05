@@ -1,0 +1,40 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <div class="c-section">
+    <div class="l-container">
+      <article class="c-blogpost">
+
+        <header class="c-blogpost__header">
+          <p class="c-blogpost__date">
+            <time datetime="{{ page.date }}">
+              {{ page.date }}
+            </time>
+          </p>
+          <h1 class="c-blogpost__title">{{ title }}</h1>
+        </header>
+
+        <div class="c-blogpost__media">
+          {% set src = "/assets/img/blogposts/" ~ image %}
+          <img
+            src="{{ src }}"
+            alt="{{ imageAlt }} - {{ imageCopyright }}"
+            class="o-fluidimg"
+            width="2000"
+            height="1500"
+            decoding="async">
+        </div>
+    
+        <div class="c-blogpost__content">
+          <div class="c-blogpost__main">
+            <p class="c-lead">{{ intro }}</p>
+            <div class="c-wysiwyg">
+              {{ content | safe }}
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </div>
+{% endblock %}

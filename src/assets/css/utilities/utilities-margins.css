@@ -1,0 +1,94 @@
+/* ==============================================
+=margins utilities
+============================================== */
+
+/*
+xs: 3px
+sm: 6px
+md: 12px
+*/
+
+/* extra small */
+.u-mbs-xs {
+  margin-block-start: 3px;
+}
+
+.u-mbe-xs {
+  margin-block-end: 3px;
+}
+
+.u-mis-xs {
+  margin-inline-start: 3px;
+}
+
+.u-mie-xs {
+  margin-inline-start: 3px;
+}
+
+/* small */
+.u-mbs-sm {
+  margin-block-start: 6px;
+}
+
+.u-mbe-sm {
+  margin-block-end: 6px;
+}
+
+.u-mis-sm {
+  margin-inline-start: 6px;
+}
+
+.u-mie-sm {
+  margin-inline-start: 6px;
+}
+
+/* medium */
+.u-mbs-md {
+  margin-block-start: 12px;
+}
+
+.u-mbe-md {
+  margin-block-end: 12px;
+}
+
+.u-mis-md {
+  margin-inline-start: 12px;
+}
+
+.u-mie-md {
+  margin-inline-start: 12px;
+}
+
+/* large */
+.u-mbs-lg {
+  margin-block-start: 24px;
+}
+
+.u-mbe-lg {
+  margin-block-end: 24px;
+}
+
+.u-mis-lg {
+  margin-inline-start: 24px;
+}
+
+.u-mie-lg {
+  margin-inline-start: 24px;
+}
+
+/* xlarge */
+.u-mbs-xl {
+  margin-block-start: 36px;
+}
+
+.u-mbe-xl {
+  margin-block-end: 36px;
+}
+
+.u-mis-xl {
+  margin-inline-start: 36px;
+}
+
+.u-mie-xl {
+  margin-inline-start: 36px;
+}

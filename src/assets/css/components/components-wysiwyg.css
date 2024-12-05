@@ -1,0 +1,23 @@
+/* ==============================================
+=wysiwyg
+============================================== */
+
+.c-wysiwyg {
+  :is(h2, h3, h4) {
+    color: var(--color-text-primary);
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: var(--fontstack-alt);
+    margin-block-start: 1.2em;
+    margin-block-end: 0.66em;
+  }
+  h2 {
+    font-size: var(--fontsize-h2);
+  }
+  h3 {
+    font-size: var(--fontsize-h3);
+  }
+  h4 {
+    font-size: var(--fontsize-h4);
+  }
+}

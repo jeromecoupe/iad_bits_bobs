@@ -1,0 +1,100 @@
+/* ==============================================
+=grid
+============================================== */
+
+.l-grid {
+  --grid-gap: var(--gutter);
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--grid-gap);
+}
+
+.l-grid--2cols {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.l-grid--3cols {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.l-grid--4cols {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.l-grid--5cols {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+@media (width >= 500px) {
+  .l-grid--full-sm {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .l-grid--2cols-sm {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .l-grid--3cols-sm {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .l-grid--4cols-sm {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .l-grid--5cols-sm {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 750px) {
+  .l-grid--full-md {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .l-grid--2cols-md {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .l-grid--3cols-md {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .l-grid--4cols-md {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .l-grid--5cols-md {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 1024px) {
+  .l-grid--full-lg {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .l-grid--2cols-lg {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .l-grid--3cols-lg {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .l-grid--4cols-lg {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .l-grid--5cols-lg {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 1440px) {
+  .l-grid--full-xl {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .l-grid--2cols-xl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .l-grid--3cols-xl {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .l-grid--4cols-xl {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .l-grid--5cols-xl {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,9 @@
+/* ==============================================
+=lead
+============================================== */
+
+.c-lead {
+  font-weight: 450;
+  font-size: var(--fontsize-lg);
+  font-family: var(--fontstack-alt);
+}

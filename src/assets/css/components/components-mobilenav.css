@@ -1,0 +1,25 @@
+/* ==============================================
+=mobilenav
+============================================== */
+
+.c-mobilenav {
+  --mobilenav-color: var(--color-white);
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-mobilenav__link {
+  font-weight: 500;
+  font-size: var(--fontsize-xl);
+  color: var(--mobilenav-color);
+  font-family: var(--fontstack-alt);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--mobilenav-color);
+    text-decoration: none;
+  }
+}

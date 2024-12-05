@@ -1,0 +1,26 @@
+{% macro blogcard(params) %}
+  {% set imgSrc = "/assets/img/blogposts/" ~ params.img %}
+  {% set stickyClass = "c-blogcard--sticky" if params.sticky %}
+  {% set titleClass = "c-blogcard--bigtitle" if params.bigtitle %}
+
+  <article class="c-blogcard {{ stickyClass }} {{ titleClass }}">
+    <p class="c-blogcard__media">
+      <a href="{{ params.url }}">
+        <img
+          src="{{ imgSrc }}"
+          alt="{{ params.imgAlt - params.imgCopyright }}"
+          class="o-fluidimg"
+          width="800"
+          height="600"
+          loading="lazy"
+          decoding="async">
+      </a>
+    </p>
+    <h2 class="c-blogcard__title">
+      <a href="{{ params.url }}">{{ params.title }}</a>
+    </h2>
+    <p class="c-blogcard__date">
+      <time datetime="{{ params.date | dateISO }}">{{ params.date | dateFull }}</time>
+    </p>
+  </article>
+{% endmacro %}
