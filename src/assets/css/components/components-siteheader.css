@@ -43,6 +43,7 @@
 }
 
 .c-siteheader__navlink {
+  color: var(--color-text-primary);
   display: block;
   margin: 0;
 
