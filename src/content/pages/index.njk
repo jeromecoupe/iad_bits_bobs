@@ -4,6 +4,9 @@ permalink: index.html
 
 {% extends "layouts/base.njk" %}
 
+{% set metaTitle = "Bits and Bobs: home" %}
+{% set metaDescription = "An awesome blog about AI" %}
+
 {% from "macros/blogcard.njk" import blogcard %}
 
 {% block content %}
@@ -13,14 +16,15 @@ permalink: index.html
       <h1 class="c-pagetitle">AI Stories</h1>
       <div class="c-homeposts">
         <div class="c-homeposts__latest">
-          {% set lastPost = collections.blogposts | first %}
-
+        
+          {% set latestPost = collections.blogposts[0] %}
           {{ blogcard({
-            url: lastPost.url,
-            title: lastPost.data.title,
-            date: lastPost.date,
-            img: lastPost.data.image,
-            imgAlt: lastPost.data.imageAlt,
+            url: latestPost.url,
+            title: latestPost.data.title,
+            date: latestPost.date,
+            img: latestPost.data.image,
+            imgAlt: latestPost.data.imageAlt,
+            imgCopyright: latestPost.data.imageCopyright,
             sticky: true,
             bigtitle: true
           }) }}
@@ -37,7 +41,8 @@ permalink: index.html
                   title: item.data.title,
                   date: item.date,
                   img: item.data.image,
-                  imgAlt: item.data.imageAlt
+                  imgAlt: item.data.imageAlt,
+                  imgCopyright: item.data.imageCopyright
                 }) }}
               </li>
               

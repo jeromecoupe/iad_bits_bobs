@@ -1,5 +1,10 @@
 {% extends "layouts/base.njk" %}
 
+{% set metaType = "article" %}
+{% set metaTitle = title %}
+{% set metaDescription = intro %}
+{% set metaImage = site.url ~ "/assets/img/blogposts/1024x1024/" ~ image %}
+
 {% block content %}
   <div class="c-section">
     <div class="l-container">
@@ -7,22 +12,37 @@
 
         <header class="c-blogpost__header">
           <p class="c-blogpost__date">
-            <time datetime="{{ page.date }}">
-              {{ page.date }}
+            <time datetime="{{ page.date | dateISO }}">
+              {{ page.date | dateFull }}
             </time>
           </p>
           <h1 class="c-blogpost__title">{{ title }}</h1>
         </header>
 
         <div class="c-blogpost__media">
-          {% set src = "/assets/img/blogposts/" ~ image %}
-          <img
-            src="{{ src }}"
-            alt="{{ imageAlt }} - {{ imageCopyright }}"
-            class="o-fluidimg"
-            width="2000"
-            height="1500"
-            decoding="async">
+
+          {% set img2000 = "/assets/img/blogposts/2000x1125/" ~ image %}
+          {% set img1500 = "/assets/img/blogposts/1500x844/" ~ image %}
+          {% set img1024 = "/assets/img/blogposts/1024x576/" ~ image %}
+          {% set img800 = "/assets/img/blogposts/800x600/" ~ image %}
+
+          <picture>
+            <source
+              srcset="{{ img2000 }} 2000w, 
+                      {{ img1500 }} 1500w, 
+                      {{ img1024 }} 1024w"
+              media="(min-width: 750px)"
+              width="2000"
+              height="1125">
+            <img
+              src="{{ img800 }}"
+              alt="{{ imageAlt }} - {{ imageCopyright }}"
+              class="o-fluidimg"
+              width="800"
+              height="600"
+              decoding="async"
+              sizes="100vw">
+          </picture>
         </div>
     
         <div class="c-blogpost__content">

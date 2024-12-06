@@ -1,41 +1,41 @@
 /* SETTINGS */
-@import url("settings/settings-colors.css");
-@import url("settings/settings-typography.css");
-@import url("settings/settings-gutter.css");
+@import "settings/settings-colors.css";
+@import "settings/settings-typography.css";
+@import "settings/settings-gutter.css";
 
 /* BASE */
-@import url("base/base-reset.css");
-@import url("base/base-fonts.css");
-@import url("base/base-html.css");
-@import url("base/base-body.css");
-@import url("base/base-links.css");
+@import "base/base-reset.css";
+@import "base/base-fonts.css";
+@import "base/base-html.css";
+@import "base/base-body.css";
+@import "base/base-links.css";
 
 /* LAYOUT */
-@import url("layout/layout-container.css");
-@import url("layout/layout-grid.css");
-@import url("layout/layout-splits.css");
+@import "layout/layout-container.css";
+@import "layout/layout-grid.css";
+@import "layout/layout-splits.css";
 
 /* OBJECTS */
-@import url("objects/objects-fluidimage.css");
+@import "objects/objects-fluidimage.css";
 
 /* COMPONENTS */
-@import url("components/components-section.css");
-@import url("components/components-siteheader.css");
-@import url("components/components-sitefooter.css");
-@import url("components/components-mainnav.css");
-@import url("components/components-homeposts.css");
-@import url("components/components-titles.css");
-@import url("components/components-blogcard.css");
-@import url("components/components-footertitle.css");
-@import url("components/components-footernav.css");
-@import url("components/components-button.css");
-@import url("components/components-blogpost.css");
-@import url("components/components-lead.css");
-@import url("components/components-wysiwyg.css");
-@import url("components/components-pagination.css");
-@import url("components/components-team.css");
-@import url("components/components-mobilemenu.css");
-@import url("components/components-mobilenav.css");
+@import "components/components-section.css";
+@import "components/components-siteheader.css";
+@import "components/components-sitefooter.css";
+@import "components/components-mainnav.css";
+@import "components/components-homeposts.css";
+@import "components/components-titles.css";
+@import "components/components-blogcard.css";
+@import "components/components-footertitle.css";
+@import "components/components-footernav.css";
+@import "components/components-button.css";
+@import "components/components-blogpost.css";
+@import "components/components-lead.css";
+@import "components/components-wysiwyg.css";
+@import "components/components-pagination.css";
+@import "components/components-team.css";
+@import "components/components-mobilemenu.css";
+@import "components/components-mobilenav.css";
 
 /* UTILITIES */
-@import url("utilities/utilities-margins.css");
+@import "utilities/utilities-margins.css";

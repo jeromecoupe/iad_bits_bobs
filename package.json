@@ -6,6 +6,7 @@
   "scripts": {
     "clear": "rimraf \"./dist\"",
     "server": "npx @11ty/eleventy --serve --quiet",
+    "images": "node \"./build_scripts/generate-images.js\"",
     "eleventy": "npx @11ty/eleventy --quiet",
     "styles:dev": "lightningcss --bundle --targets \">= 0.5% and not dead\" \"./src/assets/css/main.css\" -o \"./dist/assets/css/main.css\"",
     "styles:prod": "lightningcss --bundle --minify --targets \">= 0.5% and not dead\" \"./src/assets/css/main.css\" -o \"./dist/assets/css/main.css\"",
@@ -13,14 +14,15 @@
     "scripts:prod": "esbuild --bundle --minify \"./src/assets/js/main.js\" --target=es6 --outfile=\"./dist/assets/js/main.bundle.js\"",
     "watch:styles": "onchange \"./src/assets/css/**/*\" -- npm run styles:dev",
     "watch:scripts": "onchange \"./src/assets/js/**/*\" -- npm run scripts:dev",
-    "dev": "npm-run-all --parallel server watch:*",
-    "build": "npm-run-all --parallel eleventy styles:prod scripts:prod"
+    "dev": "npm-run-all --parallel images server watch:*",
+    "build": "npm-run-all clear --parallel images eleventy styles:prod scripts:prod"
   },
   "author": "Jérôme Coupé",
   "license": "MIT",
   "description": "Sample blog for workshops",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^5.0.0",
     "esbuild": "^0.24.0",
     "lightningcss-cli": "^1.28.2",
     "luxon": "^3.5.0",

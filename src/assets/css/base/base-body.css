@@ -9,3 +9,7 @@ body {
   color: var(--color-text-primary);
   font-size: var(--fontsize-base);
 }
+
+body:has(.is-open) {
+  overflow-y: hidden;
+}

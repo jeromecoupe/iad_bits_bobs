@@ -1,3 +1,6 @@
+// plugins
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+
 // collections
 import { blogposts } from "./src/_11ty/collections/blogposts.js";
 import { team } from "./src/_11ty/collections/team.js";
@@ -21,6 +24,9 @@ export default function (eleventyConfig) {
   // avoid processing and watching files
   eleventyConfig.ignores.add("./src/assets/**/*");
   eleventyConfig.watchIgnores.add("./src/assets/**/*");
+
+  // make sure files are physically copied with --serve
+  eleventyConfig.setServerPassthroughCopyBehavior("copy");
 
   // copy files
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");

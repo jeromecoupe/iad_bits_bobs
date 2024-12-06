@@ -5,7 +5,8 @@
         <a href="/">
           <img
             src="/assets/img/logo.svg"
-            alt=logo: Bits & Bobs: go to homepage">
+            alt="Logo Bits&amp;Bobs: go to homepage"
+            eleventy:ignore>
         </a>
       </p>
       <div class="c-siteheader__nav">
@@ -23,6 +24,13 @@
           {% endfor %}
         </nav>
       </div>
+      <p class="c-siteheader__navlink">
+        <a 
+          class="c-hamburgerlink js-menutrigger" 
+          href="#footernav">
+          {% include "svg/icon_hamburger.svg" %}
+        </a>
+      </p>
     </div>
   </div>
   {% include "partials/mobilemenu.njk" %}

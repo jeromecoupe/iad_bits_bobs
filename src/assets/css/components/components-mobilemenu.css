@@ -2,17 +2,29 @@
 =mobilemenu
 ============================================== */
 
+@keyframes menuAppear {
+  from {
+    opacity: 0;
+  }
+}
+
 .c-mobilemenu {
   --mobilemenu-bkg: var(--color-gray-100);
   --mobilemenu-color: var(--color-white);
-  --mobilemenu-padding: 24px;
+  --mobilemenu-inline-padding: 18px;
+  --mobilemenu-block-padding: 24px;
 
+  box-sizing: border-box;
+  z-index: 10;
   position: fixed;
   inset-block-start: 0;
   inset-inline-start: 0;
   inline-size: 100%;
   block-size: 100%;
   background-color: var(--mobilemenu-bkg);
+
+  padding-block: var(--mobilemenu-block-padding);
+  padding-inline: var(--mobilemenu-inline-padding);
 
   display: flex;
   flex-direction: column;
@@ -23,8 +35,6 @@
 .c-mobilemenu__actions {
   flex: 0 0 auto;
 
-  padding-block: 18px;
-  padding-inline: var(--mobilemenu-padding);
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -32,10 +42,21 @@
   gap: 3px;
 }
 
-.c-mobilemenu__close {
-  /* @TODO */
+.c-mobilemenu__actions a {
+  display: block;
+}
 
-  padding: 3px;
+.c-mobilemenu__actions svg {
+  display: block;
+}
+
+.c-mobilemenu__close {
+  font-weight: 400;
+  font-size: var(--fontsize-base);
+  line-height: 1.2;
+  font-family: var(--fontstack-alt);
+
+  padding: 0;
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -44,8 +65,6 @@
 
 .c-mobilemenu__main {
   flex: 1 1 100%;
-
-  padding: var(--mobilemenu-padding);
 
   display: flex;
   flex-direction: column;
@@ -63,4 +82,9 @@
 
 .c-mobilemenu.is-open {
   display: flex;
+  animation: menuAppear 0.2s ease-out;
+
+  @media (width >= 750px) {
+    display: none;
+  }
 }

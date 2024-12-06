@@ -4,6 +4,9 @@ permalink: "about/index.html"
 
 {% extends "layouts/base.njk" %} 
 
+{% set metaTitle = "Bits and Bobs: about us" %}
+{% set metaDescription = "Our mission and awesome team" %}
+
 {% from "macros/blogcard.njk" import blogcard %} 
 {% from "macros/teamcard.njk" import teamcard %} 
 
@@ -12,7 +15,7 @@ permalink: "about/index.html"
   <div class="l-container">
     <h1 class="c-pagetitle">About Us</h1>
 
-    <div class="l-split  l-split--half-md">
+    <div class="l-split l-split--1fr2fr-md  l-split--half-lg">
       <div>
         <h2 class="c-h2">Our mission</h2>
       </div>

@@ -3,9 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>{{ metaTitle|default("Bits and Bobs") }}</title>
+  <meta name="description" content="{{ metaDescription|default("A blog about AI") }}">
+  
+  <!-- CSS & JS -->
   <link rel="stylesheet" href="/assets/css/main.css">
   <script type="module" src="/assets/js/main.bundle.js"></script>
+
+  <!-- Open Graph -->
+  {% set metaUrl = site.url ~ page.url %}
+  <meta property="og:title" content="{{ metaTitle|default("Bits and Bobs") }}">
+  <meta property="og:type" content="{{ metaType|default("website") }}">
+  <meta property="og:url" content="{{ metaUrl }}">
+  <meta property="og:image" content="{{ metaImage|default("/assets/img/socialmedia.jpg") }}">
+  <meta property="og:description" content="{{ metaDescription|default("A blog about AI") }}">
 </head>
 <body>
   {% include "partials/siteheader.njk" %}

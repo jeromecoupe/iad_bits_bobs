@@ -1,5 +1,6 @@
 {% macro blogcard(params) %}
-  {% set imgSrc = "/assets/img/blogposts/" ~ params.img %}
+
+  {% set img800 = "/assets/img/blogposts/800x600/" ~ params.img %}
   {% set stickyClass = "c-blogcard--sticky" if params.sticky %}
   {% set titleClass = "c-blogcard--bigtitle" if params.bigtitle %}
 
@@ -7,8 +8,9 @@
     <p class="c-blogcard__media">
       <a href="{{ params.url }}">
         <img
-          src="{{ imgSrc }}"
-          alt="{{ params.imgAlt - params.imgCopyright }}"
+          src="{{ img800 }}"
+          sizes="100vw"
+          alt="{{ params.imgAlt }} - {{ params.imgCopyright }}"
           class="o-fluidimg"
           width="800"
           height="600"

@@ -1,32 +1,25 @@
-<div class="c-mobilemenu">
+<div class="c-mobilemenu js-mobilemenu">
   <div class="c-mobilemenu__actions">
-    <button class="c-mobilemenu__close">Close menu</button>
+    <button 
+      class="c-mobilemenu__close  js-menutrigger"
+      aria-label="Open navigation menu">
+        {% include "svg/icon_close.svg" %}
+    </button>
   </div>
   <div class="c-mobilemenu__main">
     <nav>
-      <ul class="c-mobilenav">
-        <li class="c-mobilenav__item">
-          <a 
-            class="c-mobilenav__link" 
-            href="#">
-            Home
-          </a>
-        </li>
-        <li class="c-mobilenav__item">
-          <a 
-            class="c-mobilenav__link" 
-            href="#">
-            Archives
-          </a>
-        </li>
-        <li class="c-mobilenav__item">
-          <a 
-            class="c-mobilenav__link" 
-            href="#">
-            About
-          </a>
-        </li>
-      </ul>
+      {% for item in mainnav %}
+        {% if loop.first %}<ul class="c-mobilenav">{% endif %}
+          <li class="c-mobilenav__item">
+            <a 
+              href="{{ item.navUrl }}"
+              style="--delay: {{ loop.index }}"
+              class="c-mobilenav__link">
+                {{ item.navLabel }}
+            </a>
+          </li>
+        {% if loop.last %}</ul>{% endif %}
+      {% endfor %}
     </nav>
   </div>
 </div>

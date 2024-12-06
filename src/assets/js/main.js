@@ -1,2 +1,2 @@
-import { init as test } from "./modules/test.js";
-test();
+import { init as mainnav } from "./modules/mainnav.js";
+mainnav();
