@@ -11,6 +11,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+  gap: 3px;
 }
 
 .c-footernav__item {
@@ -19,7 +20,7 @@
 
 .c-footernav__link {
   display: inline-block;
-  font-size: var(--fontsize-sm);
+  font-size: var(--fontsize-base);
   padding-block: 3px;
   line-height: 1.2;
   color: var(--color-white);
