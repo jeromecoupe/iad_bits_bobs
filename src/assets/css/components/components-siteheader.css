@@ -43,7 +43,6 @@
 }
 
 .c-siteheader__navlink {
-  color: var(--color-text-primary);
   display: block;
   margin: 0;
 
@@ -54,5 +53,6 @@
 
 .c-siteheader__navlink a,
 .c-siteheader__navlink svg {
+  color: var(--color-text-primary);
   display: block;
 }
