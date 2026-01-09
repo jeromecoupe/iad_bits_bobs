@@ -8,11 +8,12 @@ pagination:
 
 {% extends "layouts/base.njk" %}
 
-{% set metaTitle = "Bits and Bobs: the blog" %}
-{% set metaDescription = "Various blogposts and perspectives on AI" %}
-
 {% from "macros/blogcard.njk" import blogcard %}
 {% from "macros/paginate.njk" import paginate %}
+
+{% set metaTitle = "Bits and Bobs: the blog" %}
+{% set metaDescription = "Various blogposts and perspectives on AI" %}
+{% set currentSection = "blog" %}
 
 {% block content %}
   

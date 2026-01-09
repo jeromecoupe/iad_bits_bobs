@@ -33,3 +33,7 @@
     text-decoration: none;
   }
 }
+
+.c-mainnav__link.is-active {
+  color: var(--color-accent);
+}

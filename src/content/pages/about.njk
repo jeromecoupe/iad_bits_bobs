@@ -4,11 +4,11 @@ permalink: "about/index.html"
 
 {% extends "layouts/base.njk" %} 
 
+{% from "macros/teamcard.njk" import teamcard %} 
+
 {% set metaTitle = "Bits and Bobs: about us" %}
 {% set metaDescription = "Our mission and awesome team" %}
-
-{% from "macros/blogcard.njk" import blogcard %} 
-{% from "macros/teamcard.njk" import teamcard %} 
+{% set currentSection = "about" %}
 
 {% block content %}
 <div class="c-section">
@@ -39,6 +39,7 @@ permalink: "about/index.html"
     <h2 class="c-h2">The team</h2>
     {% for item in collections.team %}
       {% if loop.first %}<ul class="l-grid  l-grid--3cols-md">{% endif %}
+
         <li>
           {{ teamcard({
             image: item.data.image,
@@ -47,6 +48,7 @@ permalink: "about/index.html"
             role: item.data.role
           }) }}
         </li>
+        
       {% if loop.last %}</ul>{% endif %}
     {% endfor %}
 

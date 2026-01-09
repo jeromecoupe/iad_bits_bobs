@@ -4,10 +4,11 @@ permalink: index.html
 
 {% extends "layouts/base.njk" %}
 
+{% from "macros/blogcard.njk" import blogcard %}
+
 {% set metaTitle = "Bits and Bobs: home" %}
 {% set metaDescription = "An awesome blog about AI" %}
-
-{% from "macros/blogcard.njk" import blogcard %}
+{% set currentSection = "home" %}
 
 {% block content %}
   <div class="c-section">

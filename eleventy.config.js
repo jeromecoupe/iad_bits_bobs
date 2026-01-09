@@ -1,5 +1,5 @@
 // plugins
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+// import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 // collections
 import { blogposts } from "./src/_11ty/collections/blogposts.js";

@@ -43,6 +43,5 @@
 }
 
 .is-open .c-mobilenav__link {
-  animation: menuLinksAppear 0.2s calc(0.1s + var(--delay, 0) * 0.1s) ease-out
-    both;
+  animation: menuLinksAppear 0.2s calc(0.1s + var(--delay, 0) * 0.1s) ease-out both;
 }

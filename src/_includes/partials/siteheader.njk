@@ -12,11 +12,17 @@
       <div class="c-siteheader__nav">
         <nav aria-label="Main Navigation">
           {% for item in mainnav %}
+            {% set currentClass = "" %}
+            {% set currentAria = "" %}
+            {% if item.navTrigger == currentSection %}
+              {% set currentClass = "is-active" %}
+              {% set currentAria = 'current="page"' %}
+            {% endif %}
             {% if loop.first %}<ul class="c-mainnav">{% endif %}
               <li class="c-mainnav__item">
                 <a 
                   href="{{ item.navUrl }}"
-                  class="c-mainnav__link">
+                  class="c-mainnav__link {{ currentClass }}" {{ currentAria|safe }}>
                     {{ item.navLabel }}
                 </a>
               </li>

@@ -9,12 +9,19 @@
   <div class="c-mobilemenu__main">
     <nav>
       {% for item in mainnav %}
+        {% set currentClass = "" %}
+        {% set currentAria = "" %}
+        {% if item.navTrigger == currentSection %}
+          {% set currentClass = "is-active" %}
+          {% set currentAria = 'current="page"' %}
+        {% endif %}
+
         {% if loop.first %}<ul class="c-mobilenav">{% endif %}
           <li class="c-mobilenav__item">
             <a 
               href="{{ item.navUrl }}"
               style="--delay: {{ loop.index }}"
-              class="c-mobilenav__link">
+              class="c-mobilenav__link {{ currentClass }}" {{ currentAria }}>
                 {{ item.navLabel }}
             </a>
           </li>

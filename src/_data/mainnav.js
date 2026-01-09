@@ -5,7 +5,7 @@ export default [
     navUrl: "/",
   },
   {
-    navLabel: "Archives",
+    navLabel: "Blogposts",
     navTrigger: "blog",
     navUrl: "/blog/",
   },
